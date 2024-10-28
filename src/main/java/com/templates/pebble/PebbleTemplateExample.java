@@ -19,14 +19,14 @@ public class PebbleTemplateExample
                 .compose(result ->
                 {
                     // Create a JsonObject for the data
-                    JsonObject data = new JsonObject();
+                    var data = new JsonObject();
 
                     // Add a string (user) to the JsonObject
                     data.put("user", "John Doe");
                     data.put("value", 75); // This will be used in arithmetic and conditional logic
 
                     // Add an array of strings (seasons) to the JsonObject
-                    JsonArray seasons = new JsonArray();
+                    var seasons = new JsonArray();
                     seasons.add("Spring");
                     seasons.add("Summer");
                     seasons.add("Autumn");
@@ -34,7 +34,7 @@ public class PebbleTemplateExample
                     data.put("seasons", seasons);
 
                     // Add an array of objects (fruits) to the JsonObject
-                    JsonArray fruits = new JsonArray();
+                    var fruits = new JsonArray();
 
                     // Each fruit is a JsonObject with name and price
                     fruits.add(new JsonObject().put("name", "Apple").put("price", 1.50));

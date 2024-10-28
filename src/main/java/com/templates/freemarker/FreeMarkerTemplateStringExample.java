@@ -46,7 +46,7 @@ public class FreeMarkerTemplateStringExample {
                         // Define the template as a string
 
                         // Compile and render the template
-                        String templateString = """
+                        var templateString = """
                                         <!DOCTYPE html>
                                         <html lang="en">
                                         <head>
@@ -116,8 +116,8 @@ public class FreeMarkerTemplateStringExample {
                                         </body>
                                         </html>
                                     """;
-                        Template template = new Template("emailTemplate", new StringReader(templateString), config);
-                        StringWriter writer = new StringWriter();
+                        var template = new Template("emailTemplate", new StringReader(templateString), config);
+                        var writer = new StringWriter();
                         template.process(data, writer);
 
                         // Output rendered template to console
